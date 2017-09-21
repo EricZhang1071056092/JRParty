@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="JRPartyService.Dynamic" CodeBehind="Dynamic.svc.cs" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

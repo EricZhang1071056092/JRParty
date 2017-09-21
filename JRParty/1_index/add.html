@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>mergeCells</title>
+    <meta charset="utf-8">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="../assets/examples.css">-->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-table.js"></script>
+    <!--<script src="../ga.js"></script>-->
+</head>
+<body>
+    <div class="container">
+        
+        <table id="table"
+               data-toggle="table"
+               data-toolbar="#toolbar"
+               data-height="400"
+               data-url="../json/data1.json">
+            <thead>
+                <tr>
+                    <th data-field="id">ID</th>
+                    <th data-field="name">Item Name</th>
+                    <th data-field="price">Item Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var columnName = "name";
+            mergeTable(columnName);
+
+        });
+        function mergeTable(field) {
+            $table = $("#table");
+            var obj = getObjFromTable($table, field);
+
+            for (var item in obj) {
+                $("#table").bootstrapTable('mergeCells', {
+                    index: obj[item].index,
+                    field: field,
+                    colspan: 1,
+                    rowspan: obj[item].row,
+                });
+            }
+
+
+        }
+
+        function getObjFromTable($table, field) {
+            var obj = [];
+            var maxV = $table.find("th").length;
+
+            var columnIndex = 0;
+            var filedVar;
+            for (columnIndex = 0; columnIndex < maxV; columnIndex++) {
+                filedVar = $table.find("th").eq(columnIndex).attr("data-field");
+                if (filedVar == field) break;
+
+            }
+            var $trs = $table.find("tbody > tr");
+            var $tr;
+            var index = 0;
+            var content = "";
+            var row = 1;
+            for (var i = 0; i < $trs.length; i++) {
+                $tr = $trs.eq(i);
+                var contentItem = $tr.find("td").eq(columnIndex).html();
+                //exist
+                if (contentItem.length > 0 && content == contentItem) {
+                    row++;
+                } else {
+                    //save
+                    if (row > 1) {
+                        obj.push({ "index": index, "row": row });
+                    }
+                    index = i;
+                    content = contentItem;
+                    row = 1;
+                }
+            }
+            if (row > 1) obj.push({ "index": index, "row": row });
+            return obj;
+        }
+    </script>
+</body>
+</html>
+ 

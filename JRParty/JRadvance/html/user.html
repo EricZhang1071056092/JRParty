@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户管理</title>
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">-->
+    <!--<link href="../assets/css/ace.min.css" rel="stylesheet" />-->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <script src="../../assets/js/require.js"></script>
+    <script src="../js/app.js"></script>
+    <!--<script src="../assets/js/fuelux.tree-sampledata.js"></script>
+    <script src="../assets/js/fuelux.tree.min.js"></script>
+    <script src="../assets/js/ace-elements.min.js"></script>
+    <script src="../assets/js/ace.min.js"></script>--> 
+    <script src="../js/user.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top " id="common_navbar">
+
+    </nav>
+
+    <div class="row" style="margin-top:70px">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            <div style="float:left">
+                <button id="table-add" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-plus"></i>新增</button>
+            </div>
+            <table id="table" data-toolbar="#toolbar"
+                   data-search="true"
+                   data-show-refresh="true"
+                   data-show-toggle="true"
+                   data-show-columns="true"
+                   data-show-export="true"
+                   data-pagination="true"
+                   data-page-list="[10, 25, 50, 100, 1000]"
+                   data-id-field="id"
+                   data-side-pagination="server"
+                   style="float:left;"></table>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="table_add_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+
+                <div class="alert alert-danger" role="alert" hidden="hidden"></div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="common-alert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center"></div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default  " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="authority_modify_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="widget-box">
+                                <div class="widget-header header-color-blue2">
+                                    <h4 class="lighter smaller">权限</h4>
+                                </div>
+                                <div class="widget-next">
+                                </div>
+                                <div class="widget-body">
+                                    <div class="widget-main padding-8">
+                                        <!--<div id="tree1" class="tree tree-selectable">
+                                            <div class="tree-folder" style="display:none;">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name"></div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div class="tree-loader" style="display: none;"></div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

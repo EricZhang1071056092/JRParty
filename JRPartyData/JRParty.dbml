@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="JRParty" Class="JRPartyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=JRParty;Persist Security Info=True;User ID=sa" SettingsObjectName="JRPartyData.Properties.Settings" SettingsPropertyName="JRPartyConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.INF_information" Member="INF_information">
+    <Type Name="INF_information">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIS_basic" Member="TIS_basic">
+    <Type Name="TIS_basic">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tissueName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="populationNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="leaderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Activity" Member="PAR_Activity">
+    <Type Name="PAR_Activity">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="month" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="context" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="alarmTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_ActivityFeedback" Member="PAR_ActivityFeedback">
+    <Type Name="PAR_ActivityFeedback">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="snId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="userId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="context" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="flag" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_ActivityPicture" Member="PAR_ActivityPicture">
+    <Type Name="PAR_ActivityPicture">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="activityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_ActivityReleaseFile" Member="PAR_ActivityReleaseFile">
+    <Type Name="PAR_ActivityReleaseFile">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="activityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_ActivitySign" Member="PAR_ActivitySign">
+    <Type Name="PAR_ActivitySign">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActivityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="personID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Brand" Member="PAR_Brand">
+    <Type Name="PAR_Brand">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Class" Member="PAR_Class">
+    <Type Name="PAR_Class">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_ClassContxt" Member="PAR_ClassContxt">
+    <Type Name="PAR_ClassContxt">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="context" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="subClassID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Executions" Member="PAR_Executions">
+    <Type Name="PAR_Executions">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="activityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Feedback" Member="PAR_Feedback">
+    <Type Name="PAR_Feedback">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="feedbackContent" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="createTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="clientID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Information" Member="PAR_Information">
+    <Type Name="PAR_Information">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="context" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="detail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_MS_List" Member="PAR_MS_List">
+    <Type Name="PAR_MS_List">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MS_msgPushID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_MS_msgPush" Member="PAR_MS_msgPush">
+    <Type Name="PAR_MS_msgPush">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="context" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Picture_Infro" Member="PAR_Picture_Infro">
+    <Type Name="PAR_Picture_Infro">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PartyBranch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ImageURL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StudyContent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Picutre" Member="PAR_Picutre">
+    <Type Name="PAR_Picutre">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_SendMsg" Member="PAR_SendMsg">
+    <Type Name="PAR_SendMsg">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="context" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_SubClass" Member="PAR_SubClass">
+    <Type Name="PAR_SubClass">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="attachTo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_Time" Member="PAR_Time">
+    <Type Name="PAR_Time">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="stauts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nowTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POP_Basic" Member="POP_Basic">
+    <Type Name="POP_Basic">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="marriageStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="politicsStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="censusRegister" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="addressID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bookletNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="populationType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workPlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="educationDegree" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="relationship" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="portrait" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POP_LeadingShip" Member="POP_LeadingShip">
+    <Type Name="POP_LeadingShip">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="birthDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JionTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="duty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="education" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrainingTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="financialType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POP_Portrait" Member="POP_Portrait">
+    <Type Name="POP_Portrait">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="imageURL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="populationID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POP_ReserveCadre" Member="POP_ReserveCadre">
+    <Type Name="POP_ReserveCadre">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="birthDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JionTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="duty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="education" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrainingTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="financialType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POP_Volunteer" Member="POP_Volunteer">
+    <Type Name="POP_Volunteer">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="birthDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JionTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="duty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="education" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrainingTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="financialType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_AccountBook" Member="PV_AccountBook">
+    <Type Name="PV_AccountBook">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="familyNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="common" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="riceWheat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cole" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="grainCrops" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vegetable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lawn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tea" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="crudeDrugs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nurseryStock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tree" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bamboo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bambooShoot" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fruit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nut" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fish" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shrimpCrab" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shellfish" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ornamentalFish" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hydrophyte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="chicken" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="duck" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="goose" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ege" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="milk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pig" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sheep" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bird" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="salary" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rationAllowance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="socialSecurity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rentalIncome" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="investment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pension" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="agriculturalMachinery" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="waste" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="logistics" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="business" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_EP_Grower" Member="PV_EP_Grower">
+    <Type Name="PV_EP_Grower">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="village" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="proName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="proAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_EP_Income" Member="PV_EP_Income">
+    <Type Name="PV_EP_Income">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="proName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="investment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="previousIncome" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="area" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="anticipatedRevenue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lengthOfLease" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="personInCharge" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_EP_Livelihood" Member="PV_EP_Livelihood">
+    <Type Name="PV_EP_Livelihood">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="year" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="proName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="proStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="investment" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="financingGap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anticipatedRevenue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="personInCharge" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_FilingRiser" Member="PV_FilingRiser">
+    <Type Name="PV_FilingRiser">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="parentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="familyNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="personalNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="familySize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="familyStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="educationalLev" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="inResidence" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="health" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ability" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="isMedical" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isInsuranceV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isInsuranceT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shakeOffPoverty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="familyAttr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="poorAttr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="income" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bank" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="creatTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_PartyMember" Member="PV_PartyMember">
+    <Type Name="PV_PartyMember">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="partyBranch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nativePlace" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="enrollTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="partyDue" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="creatTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_score" Member="PV_score">
+    <Type Name="PV_score">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="activity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pmId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="points" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_Synopsis" Member="PV_Synopsis">
+    <Type Name="PV_Synopsis">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="parentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="creatTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PV_SynopsisFiles" Member="PV_SynopsisFiles">
+    <Type Name="PV_SynopsisFiles">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="parentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REG_Basic" Member="REG_Basic">
+    <Type Name="REG_Basic">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_Authority" Member="SYS_Authority">
+    <Type Name="SYS_Authority">
+      <Column Name="token" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="authorityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="module" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="authorityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_District" Member="SYS_District">
+    <Type Name="SYS_District">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="districtName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="attachTo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subDistrictNum" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_LoginNote" Member="SYS_LoginNote">
+    <Type Name="SYS_LoginNote">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="createTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_Role" Member="SYS_Role">
+    <Type Name="SYS_Role">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="roleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="district" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_Role_Authority" Member="SYS_Role_Authority">
+    <Type Name="SYS_Role_Authority">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="roleID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="authorityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_User" Member="SYS_User">
+    <Type Name="SYS_User">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="roleID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="enable" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="portrait" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="district" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_User_Authority" Member="SYS_User_Authority">
+    <Type Name="SYS_User_Authority">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="authorityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SYS_Version" Member="SYS_Version">
+    <Type Name="SYS_Version">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="versionNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="flag" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TEA_Conference" Member="TEA_Conference">
+    <Type Name="TEA_Conference">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="participation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TEA_VolunteerActivity" Member="TEA_VolunteerActivity">
+    <Type Name="TEA_VolunteerActivity">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POS_basic" Member="POS_basic">
+    <Type Name="POS_basic">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="releaseTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POP_CheckLeadingShip" Member="POP_CheckLeadingShip">
+    <Type Name="POP_CheckLeadingShip">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="birthDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JionTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="workTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="duty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="education" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TrainingTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="financialType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="operate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAR_ActivityPerform" Member="PAR_ActivityPerform">
+    <Type Name="PAR_ActivityPerform">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActivityID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="districtID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INF_Push" Member="INF_Push">
+    <Type Name="INF_Push">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="authorId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="objs" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="creatTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

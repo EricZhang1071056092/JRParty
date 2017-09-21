@@ -1,0 +1,86 @@
+ body{
+     
+ }
+.middle .leftMenu{
+	width: 210px;
+	height: 510px;
+	background-color: #1c2b36;
+	float: left;
+}
+.middle .leftMenu .topMenu {
+	height: 42px;
+	background-color: #0065a5;
+    text-align:center;
+}
+.middle .leftMenu .topMenu img{
+	margin: 11px;
+	float: left;
+}
+.middle .leftMenu .topMenu .changeMenu{
+	cursor: pointer;
+}
+.middle .leftMenu .topMenu .banshi{
+	padding-left: 23px;
+}
+.middle .leftMenu .topMenu .menuTitle{
+	text-align: center;
+	color: #F2F2F2;
+	float: left;
+	line-height: 42px;
+	font-size: 16px;
+    font-weight: bold;
+	/*width: 120px;*/
+}
+.menu_list {
+	width: 210px;
+	background: #354045;
+}
+.menu_list ul li{
+	display: block;
+	text-align: center;
+	width: 100%;
+    color:white;
+}
+.menu_list ul li .fuMenu {
+	color: #F2F2F2;
+	font-size: 16px;
+	cursor: pointer;
+	height: 40px;
+	line-height: 60px;
+	text-align: center;
+	width: 210px;
+	/*border-bottom: 1px solid #16222b;*/
+	float: left;
+}
+.menu_list ul li .xiala{
+	float: left;
+	margin-left: -50px;
+	margin-top: 27px;
+}
+.menu_list ul li .div1 {
+	width: 100%;
+	height: auto;
+	float: left;
+}
+.menu_list ul li .div1 .zcd{
+	 
+	font-size: 14px;
+	height: 35px;
+	background-color: #0077d1;
+	margin-bottom: 1px;
+	cursor: pointer;
+	line-height: 35px;
+	text-align: center;
+	width: 210px;
+    margin-top:-2px;
+}
+.div1 {
+	height: 200px;
+	display: none;
+}
+.menu_list ul li .div1 .zcd:hover{ color: white; background-color: #5794e5;  }
+.removes{
+	color: white !important;
+	border-left: 3px solid #f37739;
+    background:#5794e5 !important;
+}

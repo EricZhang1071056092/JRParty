@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='../fullcalendar/fullcalendar.css' rel='stylesheet' />
+    <link href='../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='../jquery/jquery-1.9.1.min.js'></script>
+    <script src='../jquery/jquery-ui-1.10.2.custom.min.js'></script>
+    <script src="../../../assets/js/bootstrap.min.js"></script>
+    <script src='../fullcalendar/fullcalendar.min.js'></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+
+            var calendar = $('#calendar').fullCalendar({
+                header: {
+                    left: ' ',
+                    center: '',
+                    right: ' '
+                },
+                defaultView: 'agendaDay',
+                selectable: true,
+                selectHelper: true,
+                select: function (start, end, allDay) {
+                    var title = prompt('Event Title:');
+                    if (title) {
+                        calendar.fullCalendar('renderEvent',
+                            {
+                                title: title,
+                                start: start,
+                                end: end,
+                                allDay: allDay
+                            },
+                            true // make the event "stick"
+                        );
+                    }
+
+                    calendar.fullCalendar('unselect');
+                    console.log(title, start, end, allDay);
+                },
+                editable: true,
+                //拖动事件
+                eventDrop: function (event, dayDelta, minuteDelta, allDay, revertFunc) {
+                    console.log(event.id, event.title, event.start, event.end, allDay); 
+                },
+                //单击事件项时触发
+                eventClick: function (calEvent, jsEvent, view) {
+                    console.log(calEvent.id, calEvent.title, calEvent.start, calEvent.end, calEvent.allDay);
+                    $('#address').val('http://172.16.0.31:6713/mag/hls/0efc00cd2dbd4e84ab571aea39375c5f/0/live.m3u8');
+                    $('#common-alert').modal();
+                    $('.cancel').unbind("click");
+                    $(".cancel").click(function () {
+                        $('#calendar').fullCalendar( 'removeEvents', calEvent.id ) 
+                    })
+                    $('.confirm').unbind("click");
+                    $(".confirm").click(function () {
+                        var schdata = { start: calEvent.start, end: calEvent.end, title: $('#address').val(), allDay: false };
+                        $('#calendar').fullCalendar('removeEvents', calEvent.id)
+                        $('#calendar').fullCalendar('renderEvent', schdata, true);
+                    }) 
+                },
+                events: [
+                    {
+                        id: 1,
+                        title: 'All Day Event',
+                        start: new Date(y, m, 1)
+                    },
+                    {
+                        id: 2,
+                        title: 'Long Event',
+                        start: new Date(y, m, d - 5),
+                        end: new Date(y, m, d - 2)
+                    },
+                    {
+                        id: 3,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d - 3, 16, 0),
+                        allDay: false
+                    },
+                    {
+                        id: 4,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d + 4, 16, 0),
+                        allDay: false
+                    },
+                    {
+                        id: 5,
+                        title: '开会',
+                        start: new Date(y, m, d, 10, 30),
+                        allDay: false
+                    },
+                    {
+                        id: 6,
+                        title: '吃饭',
+                        start: new Date(y, m, d, 12, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false
+                    },
+                    {
+                        id: 7,
+                        title: 'Birthday Party',
+                        start: new Date(y, m, d + 1, 19, 0),
+                        end: new Date(y, m, d + 1, 22, 30),
+                        allDay: false
+                    },
+                    {
+                        id: 8,
+                        title: 'Click for Google',
+                        start: new Date(y, m, 28),
+                        end: new Date(y, m, 29),
+                        url: 'http://google.com/'
+                    }
+                ]
+            });
+
+        });
+    </script>
+    <style>
+        body {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        }
+
+        #calendar {
+            width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center"><h1>监控视屏播放时间安排</h1></div>
+    <div id='calendar'></div>
+    <div class="modal fade" id="common-alert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    <form class="form-horizontal" style="padding-top:5px;">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label" style="padding-top:1px;text-align:center;line-height:30px">流地址：</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="address" placeholder="流地址">
+                            </div>
+                        </div> 
+                    </form> 
+                </div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" data-dismiss="modal">修改</button>
+                    <button type="button" class="btn btn-danger cancel" data-dismiss="modal">删除</button>
+                    <button type="button" class="btn btn-default  " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

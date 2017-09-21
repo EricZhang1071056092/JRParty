@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <link href="../jquery-easyui-1.5.2/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../jquery-easyui-1.5.2/themes/icon.css" rel="stylesheet" />
+    <link href="../jquery-easyui-1.5.2/demo/demo.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../assets/css/common/common.css" rel="stylesheet" />
+    <link href="../assets/css/1_index/exam.css" rel="stylesheet" />
+    <link href="../assets/css/common/public.css" rel="stylesheet" />
+    <link href="../assets/css/common/menu.css" rel="stylesheet" />
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/easyui/jquery.easyui.min.js"></script>
+    <script src="../assets/js/echarts-all.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/2_common/app.js"></script>
+    <script src="../assets/js/1_index/exam_ZS.js"></script>
+</head>
+<body> 
+    <div id="cc" class="easyui-layout" style="width:100%;min-height:600px;" data-options="fit:true">
+        <div data-options="region:'west',split:true" style="width: 179px; ">
+            <div id="topAnchor" hidden></div>
+            <ul class="leftbar2"></ul>
+        </div>
+        <div data-options="region:'center'">
+            <div style="  left: 180px; right: 0;float: left; border: 1px solid #ddd; margin: 0 0 20px 0; " id="statistic">
+            </div>
+        </div>
+    </div>
+    <!--<div id="topAnchor"></div>
+    <div class="row"> 
+            <div class="col-md-2" style="padding-top: 2px;color:#597dc7 ">
+                <ul class="leftbar2">  </ul>
+            </div>
+            <div class="col-md-10" style="float: left; border: 1px solid #ddd; margin-top: 10px; min-height:500px" id="statistic"> 
+        </div> 
+    </div>-->
+
+    <div class="modal fade" id="table_add_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+
+                <div class="alert alert-danger" role="alert" hidden="hidden"></div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="common-alert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center"></div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default  " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id='iDetail' target='_blank' style='display: none;'></a>
+</body>
+</html>

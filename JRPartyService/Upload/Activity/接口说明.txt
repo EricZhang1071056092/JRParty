@@ -1,0 +1,14 @@
+1、System    （完成）
+系统
+2、Party      （完成）
+任务
+3、Television   （完成）
+电视
+4、Tissue        （完成）
+基本组织
+5、Position        （单条查看）
+基本阵地
+6、Regime          （完成）
+基本制度
+7、Team 
+基本队伍

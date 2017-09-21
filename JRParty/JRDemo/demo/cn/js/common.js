@@ -1,0 +1,25 @@
+// JavaScript Document
+// New
+var KEY = {
+	UP:28,
+	DOWN:29,
+	LEFT:30,
+	RIGHT:31,
+	ENTER:13,
+	PAGEDOWN:34,
+	PAGEUP:33,
+	//后退-
+	BACK:45,
+	//退出+
+	EXIT:61,
+	NUMBER0:48,
+	NUMBER1:49,
+	NUMBER2:50,
+	NUMBER3:51,
+	NUMBER4:52,
+	NUMBER5:53,
+	NUMBER6:54,
+	NUMBER7:55,
+	NUMBER8:56,
+	NUMBER9:57
+};

@@ -1,0 +1,104 @@
+﻿{
+    "rows": [
+        { 
+          "context": "召开组织生活会",
+            "id": "1",
+            "users": "车臣",
+            "preview": "加强思想建设，打造学习型党组织",
+            "deliveryDistrict": "赵塘村党总支",
+            "district": "华阳街道党工委",
+            "month": "2017-6",
+            "status": "执行中",
+            "grade": "80",
+			"totalgrade": "80"
+        },
+        {
+            "context": "召开组织生活会",
+            "id": "3",
+            "users": "车臣",
+            "preview": "加强思想建设，打造学习型党组织",
+            "deliveryDistrict": "云塘村党总支",
+            "district": "华阳街道党工委",
+            "month": "2017-6",
+            "status": "已完成",
+            "grade": "100" ,
+			"totalgrade": "80"
+        },
+           {
+               "context": "召开组织生活会",
+               "id": "2",
+               "users": "车臣",
+               "preview": "进一步加强制度建设",
+               "deliveryDistrict": "红旗社区党支部",
+               "district": "崇明街道党工委",
+               "month": "2017-5",
+               "status": "未执行",
+               "grade": "100" ,
+			"totalgrade": "90"
+           },
+        {
+            "context": "召开组织生活会",
+            "id": "20",
+            "users": "张悦",
+            "preview": "进一步加强制度建设",
+            "deliveryDistrict": "甲城社区党支部",
+            "district": "崇明街道党工委",
+            "month": "2017-5",
+            "status": "执行中",
+            "grade": "90",
+			"totalgrade": "90"
+			  },
+        {
+            "context": "召开组织生活会",
+            "id": "20",
+            "users": "张悦",
+            "preview": "进一步加强制度建设",
+            "deliveryDistrict": "甲城社区党支部",
+            "district": "崇明街道党工委",
+            "month": "2017-5",
+            "status": "执行中",
+            "grade": "80",
+			"totalgrade": "90"
+			  },
+        {
+            "context": "召开组织生活会",
+            "id": "20",
+            "users": "张悦",
+            "preview": "进一步加强制度建设",
+            "deliveryDistrict": "甲城社区党支部",
+            "district": "崇明街道党工委",
+            "month": "2017-5",
+            "status": "执行中",
+            "grade": "70",
+			"totalgrade": "90"
+			  },
+        {
+            "context": "召开组织生活会",
+            "id": "20",
+            "users": "张悦",
+            "preview": "进一步加强制度建设",
+            "deliveryDistrict": "甲城社区党支部",
+            "district": "崇明街道党工委",
+            "month": "2017-5",
+            "status": "执行中",
+            "grade": "60",
+			"totalgrade": "90"
+			  },
+        {
+            "context": "召开组织生活会",
+            "id": "20",
+            "users": "张悦",
+            "preview": "进一步加强制度建设",
+            "deliveryDistrict": "甲城社区党支部",
+            "district": "崇明街道党工委",
+            "month": "2017-5",
+            "status": "执行中",
+            "grade": "50" ,
+			"totalgrade": "90"
+			}
+     
+    ],
+    "IsOk": 0,
+    "Msg": "ok",
+    "total": 122
+}

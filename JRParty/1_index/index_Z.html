@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../assets/css/common/common.css" rel="stylesheet" />
+    <link href="../assets/css/1_index/index.css" rel="stylesheet" />
+    <link href="../assets/css/common/public.css" rel="stylesheet" />
+    <link href="../assets/css/common/menu.css" rel="stylesheet" />
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/2_common/app.js"></script>
+    <script src="../assets/js/1_index/index_Z.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" id="common_module-nav">
+    </nav>
+    <div style="height: 10px; background: url('../assets/img/1_index/ding2.png');  ">
+    </div>
+    <div class="middle">
+        <div class="leftMenu" style="background: url('../assets/img/1_index/leftbg.png'); background-repeat: no-repeat;background-size:cover ">
+            <div class="topMenu" style=" text-align: left;margin-left:0px; margin-top: 20px; line-height: 40px; color:#0a1080;font-weight:bold; background: url('../assets/img/1_index/zhibu.png'); background-repeat: no-repeat; background-size: 210px 40px; ">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="zhibu"></span>
+            </div>
+            <div class="menu_list">
+                <ul>
+                    <li class="plan">
+                        <p class="fuMenu"><img src="../assets/img/1_index/mokuai.png" width="20" style="margin-top:21px" />&nbsp;&nbsp;管理模块&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-chevron-right"></i></p>
+
+                        <div class="div1">
+                            <p class="zcd" id="zcd1" onclick="window.location.href = 'index_z.html'">计划发布</p>
+                            <p class="zcd" id="zcd2" onclick="window.location.href = 'task_z.html'">任务管理</p>
+                            <p class="zcd" id="zcd4" onclick="window.location.href = 'task_check.html'">任务审核</p>
+                            <p class="zcd" id="zcd3" onclick="window.location.href = 'exam_zs.html'">统计汇总</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p class="fuMenu"><img src="../assets/img/1_index/camera.png" width="20" style="margin-top:21px" />&nbsp;&nbsp;监控管理&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-chevron-right"></i></p>
+
+                        <div class="div1">
+                            <p class="zcd" id="zcd9" onclick="window.location.href = '../3_camera/camera_infor_Z.html'">监控信息</p>
+                            <p class="zcd" id="zcd10" onclick="window.location.href = '../3_camera/timeset_Z.html'">截屏时间设置</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p class="fuMenu"><img src="../assets/img/1_index/yunwei.png" width="20" style="margin-top:21px" />&nbsp;&nbsp;运维管理&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-chevron-right"></i></p>
+
+                        <div class="div1">
+                            <p class="zcd" id="zcd19" onclick="window.location.href = '../2_system/system_Z.html'">组织管理</p>
+                            <p class="zcd" id="zcd20" onclick="window.location.href = '../2_system/user_Z.html'">用户管理</p>
+                        </div>
+                    </li>
+                    <li class="" onclick="window.location.href = '../0_login/login.html'">
+                        <p class="fuMenu" style="text-align:left;margin-left:40px"><img src="../assets/img/1_index/out.png" width="20" style="margin-top:21px" />&nbsp;&nbsp;注销&nbsp;&nbsp;&nbsp;</p>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding:0;margin:0">
+        <div class="col-md-10 content" style="position: relative; float: right;">
+            <div class="col-md-12 table" style="background:white ">
+                <div style=" margin-top:5px;">
+                    <table id="table" data-toolbar="#toolbar"
+                           data-search="true"
+                           data-show-refresh="true"
+                           data-show-toggle="true"
+                           data-show-columns="true"
+                           data-show-export="true"
+                           data-pagination="true"
+                           data-page-list="[10, 25, 50, 100, 1000]"
+                           data-id-field="id"
+                           data-side-pagination="server"
+                           style="background:white"></table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+     <div class="modal fade" id="table_add_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+
+                <div class="alert alert-danger" role="alert" hidden="hidden"></div>
+                <div class="modal-body">
+                </div>
+               <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">关闭</button> 
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="modal fade" id="common-alert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center"></div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default  " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

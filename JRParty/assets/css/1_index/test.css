@@ -1,0 +1,159 @@
+﻿.navbar-default {
+    height: 135px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.list-group {
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+    .list-group li {
+        margin-top: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+        text-align: center;
+        font-weight: 700;
+        color: black;
+    }
+
+        .list-group li:hover {
+            margin-top: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            text-align: center;
+            font-size: 17px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            color: #0057a1;
+        }
+
+        .list-group li:active {
+            margin-top: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            text-align: center;
+            font-size: 17px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            color: #0057a1;
+        }
+
+        .list-group li:nth-child(1) a {
+            margin-top: 10px;
+            border: none;
+            text-align: center;
+            font-size: 17px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            color: #0057a1;
+        }
+
+        .list-group li a:hover {
+            color: #d47455;
+            text-decoration: none;
+        }
+
+        .list-group li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+#list li a {
+    height: 43px;
+    width: 70px;
+    line-height: 49px;
+    font-size: large;
+    font-weight: 500;
+    color: white;
+    padding: 10px 30px;
+    height: 30px;
+    margin-right: 50px;
+}
+
+    #list li a:hover {
+        height: 43px;
+        width: 70px;
+        line-height: 49px;
+        font-size: large;
+        font-weight: 700;
+        color: white;
+        background-size: cover;
+        padding: 10px 30px;
+        height: 30px;
+        text-decoration: none;
+        margin-right: 50px;
+        background: url('../../img/1_index/btn_anniu.png');
+    }
+
+#manage:nth-child(1) {
+    height: 43px;
+    width: 70px;
+    line-height: 49px;
+    font-size: large;
+    font-weight: 700;
+    color: white;
+    background: url('../../img/1_index/btn_anniu.png');
+    background-size: cover;
+    padding: 10px 30px;
+    height: 30px;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.leftbar {
+    line-height: 47px;
+    font-size: medium;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+
+.centerbar {
+    /*text-align: center;*/
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+
+.list_out li a {
+    line-height: 47px;
+    font-size: medium;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.left_list {
+    float: left;
+}
+
+.sidebar {
+    background: url('../../img/1_index/dk.png');
+    background-size: cover;
+    min-height: 500px;
+    margin-top: -6px;
+}
+
+.list {
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    background: none;
+}

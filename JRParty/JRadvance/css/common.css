@@ -1,0 +1,26 @@
+﻿.navbar-right li{
+    margin:0 10px 0 5px;
+    color:white;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background:#2e65bb;
+    color:white;
+}
+.navbar-right li:hover{
+    background:#2e65bb;
+    color:white;
+}
+.navbar-default{
+    background:url("../img/50.png");
+    color:white;
+}
+.navbar-default .navbar-nav>li>a{
+    color:white;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    color:white;
+    background:#2e65bb;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+    color:white;
+}

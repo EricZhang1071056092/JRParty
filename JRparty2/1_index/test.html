@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>多行滚动jQuery循环新闻列表代码</title>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            height: 25px;
+            line-height: 25px;
+        }
+
+        #three {
+            margin: 30px auto;
+            overflow: hidden;
+            border: 1px solid blue;
+            height: 127px;
+            width: 200px;
+        }
+
+            #three ul {
+                margin-top: 125px;
+                width: 150px;
+            }
+    </style>
+    </head>
+<body>
+    <div id="three">
+        <ul>
+            <li>asd</li>
+            <li>dfg</li>
+            <li>xz</li>
+            <li>dfg</li>
+            <li>q2</li>
+            <li>xz</li>
+            <li>asd</li>
+            <li>dfg</li>
+        </ul>
+    </div>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        //滚动公告
+        function dd() {
+            //每一秒减去25px----->一个li的高度
+            //linear----->滚动更加流畅
+            $('#three ul').animate({ marginTop: '-=25px' }, 1000, "linear", function () {
+                var top = $('#three ul').attr('style');
+                //当有一个li出去时改变top值并克隆第一个li在ul内部进行追加
+                if (top == 'margin-top: -25px;') {
+                    $('#three ul').attr('style', 'margin-top: 0px;')
+                    $("#three ul li:first").remove().clone(true).appendTo("#three ul");
+                }
+            });
+        }
+        var int = setInterval(dd, 1000);
+        $('#three').hover(function () {
+            clearInterval(int);
+        }, function () {
+            int = setInterval(dd, 1000);
+        });
+    </script>
+</body>
+</html>

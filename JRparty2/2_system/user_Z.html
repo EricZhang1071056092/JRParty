@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <!--<link href="../assets/css/ace.min.css" rel="stylesheet" />-->
+    <link href="../assets/css/common/common.css" rel="stylesheet" />
+    <link href="../assets/css/2_system/user.css" rel="stylesheet" />
+    <link href="../assets/css/common/public.css" rel="stylesheet" />
+    <link href="../assets/css/common/menu.css" rel="stylesheet" />
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-table.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+
+    <script src="../assets/js/fuelux.tree-sampledata.js"></script>
+    <script src="../assets/js/fuelux.tree.min.js"></script>
+    <script src="../assets/js/ace-elements.min.js"></script>
+    <script src="../assets/js/ace.min.js"></script>
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/2_common/app.js"></script>
+    <script src="../assets/js/3_system/user_Z.js"></script>
+</head>
+<body>
+    <div class="row" style="padding:0;margin:0">
+        <div class="col-md-12 table">
+            <div style="float:left;margin-top:5px;">
+                <a href="system_structure_Z.html"><button id="system_structure" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-tree-deciduous"></i>组织结构图</button></a>
+            </div> 
+            <table id="table" data-toolbar="#toolbar"
+                   data-search="true"
+                   data-show-refresh="true"
+                   data-show-toggle="true"
+                   data-show-columns="true"
+                   data-show-export="true"
+                   data-pagination="true"
+                   data-page-list="[10, 25, 50, 100, 1000]"
+                   data-id-field="id"
+                   data-side-pagination="server"
+                   style="background:white"></table>
+        </div>
+    </div>
+    <div class="modal fade" id="table_add_modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+
+                <div class="alert alert-danger" role="alert" hidden="hidden"></div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="common-alert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center"></div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default  " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="authority_modify_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="widget-box">
+                                <div class="widget-header header-color-blue2">
+                                    <h4 class="lighter smaller">权限</h4>
+                                </div>
+                                <div class="widget-next">
+                                </div>
+                                <div class="widget-body">
+                                    <div class="widget-main padding-8">
+                                        <!--<div id="tree1" class="tree tree-selectable">
+                                            <div class="tree-folder" style="display:none;">
+                                                <div class="tree-folder-header">
+                                                    <i class="icon-plus"></i>
+                                                    <div class="tree-folder-name"></div>
+                                                </div>
+                                                <div class="tree-folder-content"></div>
+                                                <div class="tree-loader" style="display: none;"></div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

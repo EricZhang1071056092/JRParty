@@ -1,0 +1,82 @@
+body{
+     background-image: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#content{
+    width: 1280px;
+    height:720px;
+    /*background-image: url("../img/bg.png");*/
+    /*background-repeat: no-repeat;*/
+}
+#left-ul li{
+    list-style: none;
+    height:42px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 22px;
+    color: white;
+    font-weight: 700
+}
+.right-ul li{
+    list-style: none;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+
+}
+#top{
+    width: 100%;
+    height: 5%;
+}
+#top-left{
+    margin-top: 20px;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+#top-right{
+    margin-top: 20px;
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-image: url("../img/xuanze.png");
+    background-repeat: no-repeat;
+}
+#left{
+    float: left;
+    margin-top: 23px;
+    margin-left: 10%;
+    width: 25%;
+    height: 100%;
+    background-image: url("../img/sanhuiyikebg.png");
+    background-repeat: no-repeat;
+}
+#right{
+    float: left;
+    margin-top: 10px;
+    width: 65%;
+    height: 100%;
+    background-image: url("../img/dangyuandahuibg.png");
+    background-repeat: no-repeat;
+}
+.ulli{
+    color: white;
+    display: none;
+    background-color: darkslateblue;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+}
+.ulli .lili li{
+    font-size: 16px;
+
+}
+.lili{
+    text-align: center;
+    padding: 0px;
+}

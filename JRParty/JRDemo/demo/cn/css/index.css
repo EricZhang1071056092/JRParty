@@ -1,0 +1,281 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#content{
+    background-image: url("../img/bg3.png");
+    width: 1280px;
+    height: 720px;
+}
+
+#leftDiv{
+    float: left;
+    height: 100%;
+    width: 30%;
+    border: 1px solid transparent;
+    margin-top: 150px;
+}
+
+
+
+.left_li{
+    text-align: left;
+    margin-left: 40px;
+    line-height: 44px;
+}
+.leftdiv{
+    text-align: left;
+    margin-left: 40px;
+    line-height: 44px;
+    border-bottom: 1px solid #007CB7;
+}
+#logo{
+    text-align: center;
+    margin-top: 30px;
+}
+#complete{
+    margin-top:-5px;
+}
+#incomplete{
+    margin-top: -5px;
+
+}
+#yiguoqi{
+    margin-top: -5px;
+    height:129px;
+}
+.aa{
+    margin-left:38px;
+    width:307px;
+    height:126px;
+    background-image: url(../img/cebg.png);
+    text-align: left;
+    margin-left: 40px;
+    line-height: 44px;
+    font-size: 18px;
+    color: white;
+}
+
+
+#statistics{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.tongji{
+    background-image: url("../img/tongi.png");
+    width: 307px;
+    height: 40px;
+    margin-left: 40px;
+    margin-bottom: 4px;
+}
+
+
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-top: -5px;
+    width: 307px;
+
+}
+
+li{
+    list-style: none;
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px solid #005099;
+    height: 42px;
+    line-height: 30px;
+}
+
+#rightDiv{
+    float: left;
+    height: 100%;
+    width: 69.5%;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+#title_span{
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+#title{
+    font-size: 24px;
+    color: #625DC4;
+    font-weight: bold;
+}
+
+
+#month{
+    margin-top: 155px;
+    border: 1px solid transparent;
+    padding-left: 38px;
+
+}
+
+
+#month2{
+    margin-top: 120px;
+}
+
+.Shape{
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 147px;
+    text-align: center;
+    line-height: 64px;
+    font-size: 26px;
+    color: white;
+    float: left;
+}
+
+/*.S1{*/
+/*position: relative;*/
+/*z-index: 1;*/
+/*}*/
+
+/*.S2{*/
+/*z-index: 2;*/
+/*left: -4px;*/
+/*}*/
+
+
+#Shape1{
+    background-image:url("../img/Shape1.png") ;
+}
+
+#Shape2{
+    background-image:url("../img/Shape2.png") ;
+}
+
+#Shape3{
+    background-image:url("../img/Shape3.png") ;
+}
+.spanColor{
+    font-family: "Times New Roman";
+    font-size: 36px;
+}
+.spanmonth{
+    font-family: 黑体;
+    font-size: 36px;
+}
+
+hr{
+    float: left;
+    /*margin-left: 1px;*/
+    width: 146.5px;
+    margin-top: 29px;
+}
+
+#downDiv{
+
+    width: 100%;
+    border: 1px solid transparent;
+    position: absolute;
+    z-index: 10;
+    height: 100px;
+    top: 150px;
+    left: -25px;
+}
+#down_1{
+    top: 60px;
+
+}
+/*#down_2{*/
+/*top: 60px;*/
+/*left: 293px;*/
+/*}*/
+/*#down_3{*/
+/*top: 60px;*/
+/*left: 590px;*/
+/*}*/
+
+.down{
+    float: left;
+    border: 1px solid transparent;
+    width: 32%;
+}
+
+
+.down_ul{
+    margin: 0px;
+    width: 93%;
+}
+
+.down_li{
+    background-image: url("../img/xuanzhong.png");
+    background-repeat: no-repeat;
+    height: 44px;
+}
+
+.down_l{
+    background-image: url("../img/xialabeij.png");
+    background-repeat: no-repeat;
+    height: 44px;
+    display:none;
+
+}
+
+.dotted_line{
+
+    height: 44px;
+    line-height: 44px;
+}
+.dotted_line2{
+
+    height: 44px;
+    line-height: 44px;
+}
+.text{
+    float: left;
+    width:79%;
+    color: #F5CD20;
+    font-size: 18px;
+    padding-left: 10px;
+    line-height: 44px;
+    text-align: left;
+}
+.spantext{
+    color: #0B1DA5;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.dotted_line img{
+    margin-left: 20px;
+    top:12px;
+    position: relative;
+    float:left;
+}
+
+
+.topline{
+	position:fixed;
+	top:140px;
+	width:100%;
+	height:5px;
+	background-color:#405888;
+}
+
+
+.dangqi{
+    margin-left: 20px;
+    top:7px;
+    position: relative;
+    float:left;
+}
+
+
+.process{
+	position:absolute;
+	font-size:40px;
+	top:260px;
+	left:300px;
+	color:white;	
+}

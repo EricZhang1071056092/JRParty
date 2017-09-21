@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../assets/css/fileinput.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="../assets/css/common/common.css" rel="stylesheet" />
+    <link href="../assets/css/1_index/task.css" rel="stylesheet" />
+    <link href="../assets/css/common/public.css" rel="stylesheet" />
+    <link href="../assets/css/common/menu.css" rel="stylesheet" />
+    <script src="../assets/js/require.js"></script>
+    <script src="../assets/js/2_common/app.js"></script>
+    <script src="../assets/js/7_team/volunteer_C.js"></script>
+</head>
+<body>
+    <div class="row" style="padding:0;margin:0">
+        <div class="col-md-12 table">
+            <div style="float:left;margin-top:5px;">
+                <!--<button id="table-add" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-plus"></i>新增</button>--> 
+                <button id="table_activity" type="button" onclick="window.location.href ='activity_C.html'" class="btn btn-warning">活动计划</button> 
+            </div>
+            <div style=" margin-top:5px;">
+                <table id="table" data-toolbar="#toolbar"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-show-columns="true"
+                       data-show-export="true"
+                       data-pagination="true"
+                       data-page-list="[10, 25, 50, 100, 1000]"
+                       data-id-field="id"
+                       data-side-pagination="server"
+                       style="background:white"></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="table_add_modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+
+                <div class="alert alert-danger" role="alert" hidden="hidden"></div>
+                <div class="modal-body"style="min-height:350px">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success" onclick="doUpload()"><i class="glyphicon glyphicon-plus"></i>提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="table_edit_modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+
+                <div class="alert alert-danger" role="alert" hidden="hidden"></div>
+                <div class="modal-body" style="min-height:350px">
+                </div>
+                <!--<div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success" onclick="doEdit()"><i class="glyphicon glyphicon-plus"></i>提交</button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="common-alert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body" style="text-align:left"></div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default  " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="common-alert2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body" style="text-align: left; min-height: 70px"></div>
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" class="btn btn-primary confirm" onclick="doUpload()">确定</button>
+                    <button type="button" class="btn btn-default " data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

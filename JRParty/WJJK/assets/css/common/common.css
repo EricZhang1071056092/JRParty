@@ -1,0 +1,474 @@
+﻿body {
+    font-family: 'Microsoft YaHei UI';
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+a {
+    color: #e67e22;
+    outline: none;
+}
+
+#html-peek img {
+    max-width: 100%;
+}
+
+.logo {
+    padding-top: 9px;
+}
+
+    .logo img {
+        max-height: 50px;
+    }
+
+.logo_span {
+    font-size: x-large;
+    position: absolute;
+    top: 14px;
+}
+
+.main-navigation {
+    /* text-align: center; */
+    background: #ffffff;
+    border-top: 1px solid #ebebeb;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+.menu {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+    .menu li {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+    }
+
+        .menu li a {
+            color: #505050;
+            line-height: 4em;
+            display: block;
+            padding: 0 21px;
+            text-decoration: none;
+        }
+
+        .menu li :hover {
+            color: #ef9034;
+            outline: none;
+        }
+
+        .menu li.nav-current {
+            border-bottom: 2px solid #e67e22;
+            margin-bottom: -2px;
+        }
+
+.menu-right {
+    margin-right: 0px;
+}
+
+    .menu-right button {
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 0;
+        margin-top: 1.4rem;
+        font-size: 16px;
+    }
+
+/*.sub_menu {
+    margin-top: 5%;
+}
+
+    .sub_menu [class*="col-"] {
+        cursor: pointer;
+        opacity: 0;
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-clip: padding-box !important;
+        border: 5px solid transparent;
+    }
+
+        .sub_menu [class*="col-"].shown {
+            opacity: 1;
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            padding: 0;
+        }
+
+            .sub_menu [class*="col-"].shown img {
+                height: 170px;
+                width: 100%;
+            }
+
+        .sub_menu [class*="col-"]:hover {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }*/
+
+
+.sub_menu [class*="col-"].shown img {
+    background: white;
+    margin: 5px 10px;
+    width: 220px;
+    height: 182px;
+}
+
+.sub_menu [class*="col-"].shown :hover {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    -webkit-transition: ease-out 0.1s;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-box-shadow: 0 0 10px rgba( 0, 0,0, 0.3);
+    -moz-box-shadow: 0 0 10px rgba(0, 0,0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.3);
+}
+
+#account-info-modal .list-group-item-title {
+    font-weight: bold;
+}
+
+
+#account-info-modal .list-group-item-title {
+    font-weight: bold;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: -45px 0 0 -45px;
+    background-color: #48CFAD;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+.block_circle {
+    text-align: center;
+    vertical-align: central;
+}
+
+    .block_circle .block_circle_number {
+        width: 60px;
+        height: 60px;
+        margin: -81px 0 0 -24px;
+        background-color: #ffffff;
+        border-radius: 100%;
+        border: #e67e22 3px solid;
+    }
+
+    .block_circle .block_circle_title {
+        width: 60px;
+        height: 30px;
+        margin: 10px 0 0 -24px;
+        background-color: #ffffff;
+        border-radius: 20%;
+        border: #e67e22 3px solid;
+        font-size: 15px;
+    }
+
+.map_right_nav {
+    position: fixed;
+    top: 300px;
+    right: -60px;
+    z-index: 1002;
+    width: 200px;
+}
+
+.map_left_nav {
+    position: fixed;
+    top: 300px;
+    left: -20px;
+    z-index: 1002;
+}
+
+    .map_left_nav div {
+        width: 64px;
+        text-align: center;
+    }
+
+        .map_left_nav div span {
+            color: #ffffff;
+        }
+
+.map_party_card {
+    font-size: 20px;
+    background-image: url('../../i/dangyuanbg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+    .map_party_card a {
+        color: #e91313;
+    }
+
+.map_top_nav {
+    position: fixed;
+    top: 80px;
+    left: 90px;
+    z-index: 1002;
+}
+
+    .map_top_nav div {
+        display: inline-block;
+        width: 64px;
+        text-align: center;
+        margin: 0 8px;
+    }
+
+        .map_top_nav div span {
+            color: #ffffff;
+        }
+
+    .map_top_nav a {
+    }
+
+        .map_top_nav a img:hover {
+            animation: markerSwing 0.93s infinite;
+            -webkit-animation: markerSwing .93s infinite ease;
+        }
+
+@keyframes markerSwing {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    15% {
+        -webkit-transform: scale(1.2);
+    }
+
+    30% {
+        -webkit-transform: scale(1);
+    }
+
+    55% {
+        -webkit-transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes markerSwing {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    15% {
+        -webkit-transform: scale(1.2);
+    }
+
+    30% {
+        -webkit-transform: scale(1);
+    }
+
+    55% {
+        -webkit-transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+.news_panel {
+}
+
+    .news_panel .news_panel-more {
+        float: right;
+    }
+
+    .news_panel ul {
+        line-height: 2;
+        padding-left: 10px;
+    }
+
+        .news_panel ul li {
+            list-style: none;
+            overflow: hidden;
+            height: 25px;
+        }
+
+            .news_panel ul li a {
+                color: #000;
+                font-family: 'Microsoft YaHei' !important;
+                font-size: 14px;
+            }
+
+                .news_panel ul li a:hover {
+                    color: #e74c3c;
+                }
+
+            .news_panel ul li span {
+                font-weight: 700;
+                color: #e74c3c;
+                margin: auto 5px;
+            }
+
+.map_product_popup {
+}
+
+    .map_product_popup img {
+        width: 100%;
+    }
+
+    .map_product_popup .map_product_popup-description {
+        font-family: 'Microsoft YaHei UI';
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+.map_area_inform {
+}
+
+    .map_area_inform img {
+        width: 100%;
+    }
+
+.map_area_inform-description {
+    font-family: 'Microsoft YaHei UI';
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.map_farm {
+}
+
+    .map_farm .map_farm-contractor {
+    }
+
+        .map_farm .map_farm-contractor img {
+            width: 72px;
+            height: 72px;
+            padding-right: 0;
+            margin-right: 10px;
+        }
+
+    .map_farm p {
+        text-indent: 2em;
+        font-family: 'Microsoft YaHei UI';
+        font-size: 16px;
+    }
+
+.check .list-group-item-title {
+    font-size: initial;
+    font-weight: 900;
+}
+
+.list-group-item.check {
+    border: 0px;
+}
+/*农产品管理*/
+.agr_product_popup {
+}
+
+    .agr_product_popup img {
+        width: 100%;
+    }
+
+    .agr_product_popup .agr_product_popup-description {
+        font-family: 'Microsoft YaHei UI';
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+/*农技人员管理*/
+.agr_expert_popup {
+}
+
+    .agr_expert_popup img {
+        width: 100%;
+    }
+
+    .agr_expert_popup .agr_expert_popup-description {
+        font-family: 'Microsoft YaHei UI';
+        font-weight: 300;
+        font-size: 20px;
+    }
+/*#common-alert .confirm{
+        background:#81c784;
+        color:#fff;
+        border:0px;
+    }
+     #common-alert .cancel{
+        background:#e57373;
+        color:#fff;
+         border:0px;
+    }*/
+
+#common-alert .cancel, #common-alert .confirm {
+    min-width: 110px;
+    padding: 12px 0;
+    text-align: center;
+}
+/*#common-alert .modal-header{
+        background-color:#72D1FF;
+        color:white
+    }*/
+.carousel-caption {
+    text-shadow: none;
+}
+
+.menu {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+    .menu li {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+    }
+
+  .menu li.nav-current {
+        border-bottom: 2px solid #e67e22;
+         margin-bottom: -2px;
+    }
+ 
+
+    
+    .block_farm .block_farm_title {
+        color:red; 
+        font-size: 12px;
+       
+    }

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>抓图查看页面</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/baguettebox.css" rel="stylesheet" />
+    <link href="assets/css/photo_check.css" rel="stylesheet" />
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/baguettebox.js"></script>
+    <script src="assets/js/jqpaginator.js"></script>
+    <script src="assets/js/photo_check.js"></script>
+</head>
+<body>
+    <div class="row" style="margin-top:10px">
+        <div class="col-xs-3 col-md-offset-1">
+            <div class="form-group" id="partybranch_top">
+                <!--<label for="disabledSelect">Disabled select menu</label>-->
+                <!--<select id="partybranch" class="form-control selectpicker" title="党支部">
+                    <option>全部</option>
+                    <option>句容党支部</option>
+                </select>-->
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="form-group" id="content_top">
+                <!--<label for="disabledSelect">Disabled select menu</label>-->
+                <select id="content" class="form-control selectpicker" style="background: url('assets/img/combo_box_bg.png'); " title="内容">
+                    <!--<option>全部</option>
+                    <option>两学一做，党员大会，第一次党员大会</option>-->
+                </select>
+            </div><!--<img src="http://localhost:8097/JRPartyService/picture/215723_thumb.jpg" />-->
+        </div>
+        <div class="col-xs-3">
+            <div class="form-group" id="time_top">
+                <!--<label for="disabledSelect">Disabled select menu</label>-->
+                <select id="time" class="form-control selectpicker" style="background: url('assets/img/combo_box_bg.png');" title="时间">
+                    <!--<option>全部</option>
+                    <option>时间</option>-->
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-1">
+            <div class="form-group">
+                <button type="button" id="submit" class="btn btn-success">查询</button>
+            </div>
+        </div>
+    </div>
+    <!-- 查看图片-->
+    <div class="" id="picture_check" style="vertical-align: middle; min-height: 800px; align-items: center; margin-top:30px">
+        <!--<img src="H:\JRParty\JRPartyService\bin\tools\172319_thumb.jpg" />-->
+        <div class="baguetteBoxOne gallery" id="baguetteBox_image" style="text-align: center;  vertical-align: middle; align-items: center; ">
+
+        </div>
+        <div style ="text-align:center;position:fixed;  bottom:5px;left:40%">
+            <div style="text-align:center; " id="pagination">
+                <ul class="pagination" id="pagination1"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F67BEE4F-24BB-4B6E-AB08-4629BB703D86}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JRPartyService</RootNamespace>
+    <AssemblyName>JRPartyService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.4.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.4.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.4.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.4.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.4.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.4.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net35\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Submail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Submail.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\ActivityUpload.ashx" />
+    <Content Include="Data\PhotoTakeUpload.ashx" />
+    <Content Include="Data\PortraitUpload.ashx" />
+    <Content Include="Position.svc" />
+    <Content Include="Information.svc" />
+    <Content Include="Team.svc" />
+    <Content Include="Regime.svc" />
+    <Content Include="Television.svc" />
+    <Content Include="Dynamic.svc" />
+    <Content Include="System.svc" />
+    <Content Include="Party.svc" />
+    <Content Include="Brand.svc" />
+    <Content Include="Tissue.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContracts\ActivityPicture.cs" />
+    <Compile Include="DataContracts\AppConfig\IAppConfig.cs" />
+    <Compile Include="DataContracts\AppConfig\MailAppConfig.cs" />
+    <Compile Include="DataContracts\AppConfig\MessageConfig.cs" />
+    <Compile Include="DataContracts\App_ActivityList.cs" />
+    <Compile Include="DataContracts\TissueList2.cs" />
+    <Compile Include="DataContracts\InfPush.cs" />
+    <Compile Include="DataContracts\PushObject.cs" />
+    <Compile Include="DataContracts\E_AcIdAndNa.cs" />
+    <Compile Include="DataContracts\App_Organs.cs" />
+    <Compile Include="DataContracts\App_Code.cs" />
+    <Compile Include="DataContracts\App_InformationList.cs" />
+    <Compile Include="DataContracts\App_Information.cs" />
+    <Compile Include="DataContracts\App_Login.cs" />
+    <Compile Include="DataContracts\Authority\AuthorityModel.cs" />
+    <Compile Include="DataContracts\Authority\AuthorityModule.cs" />
+    <Compile Include="DataContracts\Authority\AuthoritySub.cs" />
+    <Compile Include="DataContracts\CommonOutputAppT.cs" />
+    <Compile Include="DataContracts\CommonOutputApp.cs" />
+    <Compile Include="DataContracts\CommonOutPutT_Three.cs" />
+    <Compile Include="DataContracts\CommonOutPutT_MT.cs" />
+    <Compile Include="DataContracts\CommonOutPutT_S.cs" />
+    <Compile Include="DataContracts\BrandDetail.cs" />
+    <Compile Include="DataContracts\List_information.cs" />
+    <Compile Include="DataContracts\List_Brand.cs" />
+    <Compile Include="DataContracts\List_VolunteerActivity.cs" />
+    <Compile Include="DataContracts\List_Position.cs" />
+    <Compile Include="DataContracts\List_Conference.cs" />
+    <Compile Include="DataContracts\PAR_Activity3List.cs" />
+    <Compile Include="DataContracts\List_MsgPush.cs" />
+    <Compile Include="DataContracts\PAR_MsgPush.cs" />
+    <Compile Include="DataContracts\POS_Detail.cs" />
+    <Compile Include="DataContracts\CON_Detail.cs" />
+    <Compile Include="DataContracts\RegimeList.cs" />
+    <Compile Include="DataContracts\VOLACT_Detail.cs" />
+    <Compile Include="DataContracts\VOL_Detail.cs" />
+    <Compile Include="DataContracts\REG_Detail.cs" />
+    <Compile Include="DataContracts\PAR_ActivityOne.cs" />
+    <Compile Include="DataContracts\PAR_CheckActivityList.cs" />
+    <Compile Include="DataContracts\List_Tissue.cs" />
+    <Compile Include="DataContracts\TIS_LeadingShip.cs" />
+    <Compile Include="DataContracts\PAR_WarningPara.cs" />
+    <Compile Include="DataContracts\Stat_Activityone1.cs" />
+    <Compile Include="DataContracts\PAR_Message.cs" />
+    <Compile Include="DataContracts\TV_BoxActivity.cs" />
+    <Compile Include="DataContracts\CommonOutPutT_Box.cs" />
+    <Compile Include="DataContracts\CommonOutPutT_M.cs" />
+    <Compile Include="DataContracts\CommonOutputT.cs" />
+    <Compile Include="DataContracts\Lib\ISender.cs" />
+    <Compile Include="DataContracts\Lib\Message.cs" />
+    <Compile Include="DataContracts\Lib\MessageXSend.cs" />
+    <Compile Include="DataContracts\Lib\SendBase.cs" />
+    <Compile Include="DataContracts\Lib\SenderFactory.cs" />
+    <Compile Include="DataContracts\App_PlanList.cs" />
+    <Compile Include="DataContracts\PAR_ActivityComplete.cs" />
+    <Compile Include="DataContracts\Stat_Activityone.cs" />
+    <Compile Include="DataContracts\Stat_Activity.cs" />
+    <Compile Include="DataContracts\SYS_SendToUser.cs" />
+    <Compile Include="DataContracts\SYS_UserList.cs" />
+    <Compile Include="DataContracts\Stat_Year.cs" />
+    <Compile Include="DataContracts\PAR_Organ.cs" />
+    <Compile Include="DataContracts\PAR_SubActivityList.cs" />
+    <Compile Include="DataContracts\PAR_ActivityList.cs" />
+    <Compile Include="DataContracts\LoginAccess.cs" />
+    <Compile Include="DataContracts\TV_TopBox.cs" />
+    <Compile Include="DataContracts\CommonOutput.cs" />
+    <Compile Include="DataContracts\userRegist.cs" />
+    <Compile Include="DataContracts\Utility\HttpWebHelper.cs" />
+    <Compile Include="DataContracts\Utility\RequestHelper.cs" />
+    <Compile Include="DataContracts\Utility\SignatureHelper.cs" />
+    <Compile Include="Data\editBrand.ashx.cs">
+      <DependentUpon>editBrand.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editPosition.ashx.cs">
+      <DependentUpon>editPosition.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editReserveCadre.ashx.cs">
+      <DependentUpon>editReserveCadre.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editRegime.ashx.cs">
+      <DependentUpon>editRegime.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReserveCadreUpload.ashx.cs">
+      <DependentUpon>ReserveCadreUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editTeam.ashx.cs">
+      <DependentUpon>editTeam.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editVolunteerActivity.ashx.cs">
+      <DependentUpon>editVolunteerActivity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BrandUpload.ashx.cs">
+      <DependentUpon>BrandUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\VolunteerActivityUpload.ashx.cs">
+      <DependentUpon>VolunteerActivityUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editVolunteer.ashx.cs">
+      <DependentUpon>editVolunteer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\VolunteerUpload.ashx.cs">
+      <DependentUpon>VolunteerUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TeamUpload.ashx.cs">
+      <DependentUpon>TeamUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RegimeUpload.ashx.cs">
+      <DependentUpon>RegimeUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\editActivity.ashx.cs">
+      <DependentUpon>editActivity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActivityUpload.ashx.cs">
+      <DependentUpon>ActivityUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PartyImageUpload.ashx.cs">
+      <DependentUpon>PartyImageUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ActivityReplenish.ashx.cs">
+      <DependentUpon>ActivityReplenish.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PositionUpload.ashx.cs">
+      <DependentUpon>PositionUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhotoTakeUpload.ashx.cs">
+      <DependentUpon>PhotoTakeUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PortraitUpload.ashx.cs">
+      <DependentUpon>PortraitUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="IPosition.cs" />
+    <Compile Include="IInformation.cs" />
+    <Compile Include="ITeam.cs" />
+    <Compile Include="IRegime.cs" />
+    <Compile Include="IBrand.cs" />
+    <Compile Include="ITissue.cs" />
+    <Compile Include="Methods\CommonMethod.cs" />
+    <Compile Include="Position.svc.cs">
+      <DependentUpon>Position.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Information.svc.cs">
+      <DependentUpon>Information.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Team.svc.cs">
+      <DependentUpon>Team.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Regime.svc.cs">
+      <DependentUpon>Regime.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Television.svc.cs">
+      <DependentUpon>Television.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ITelevision.cs" />
+    <Compile Include="IDynamic.cs" />
+    <Compile Include="ISystem.cs" />
+    <Compile Include="Dynamic.svc.cs">
+      <DependentUpon>Dynamic.svc</DependentUpon>
+    </Compile>
+    <Compile Include="System.svc.cs">
+      <DependentUpon>System.svc</DependentUpon>
+    </Compile>
+    <Compile Include="picture.cs" />
+    <Compile Include="IParty.cs" />
+    <Compile Include="Party.svc.cs">
+      <DependentUpon>Party.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Brand.svc.cs">
+      <DependentUpon>Brand.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Tissue.svc.cs">
+      <DependentUpon>Tissue.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JRPartyData\JRPartyData.csproj">
+      <Project>{2469b7af-232f-461f-9335-82cb9474aaa1}</Project>
+      <Name>JRPartyData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\PartyImageUpload.ashx" />
+    <Content Include="Data\editActivity.ashx" />
+    <Content Include="Data\ActivityReplenish.ashx" />
+    <Content Include="Data\PositionUpload.ashx" />
+    <Content Include="Data\RegimeUpload.ashx" />
+    <Content Include="Data\TeamUpload.ashx" />
+    <Content Include="Data\VolunteerUpload.ashx" />
+    <Content Include="Data\ReserveCadreUpload.ashx" />
+    <Content Include="Data\editPosition.ashx" />
+    <Content Include="Data\editTeam.ashx" />
+    <Content Include="Data\VolunteerActivityUpload.ashx" />
+    <Content Include="Data\editVolunteerActivity.ashx" />
+    <Content Include="Data\editReserveCadre.ashx" />
+    <Content Include="Data\editVolunteer.ashx" />
+    <Content Include="Data\editRegime.ashx" />
+    <Content Include="Data\BrandUpload.ashx" />
+    <Content Include="Data\editBrand.ashx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\JRPartyService.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49794</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49794/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

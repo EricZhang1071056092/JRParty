@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>首页</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-table.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../assets/css/fileinput.min.css" rel="stylesheet" />
+    <link href="../assets/css/common/common.css" rel="stylesheet" />
+    <link href="../assets/css/1_index/task_add.css" rel="stylesheet" />
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.cookie.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-select.min.js"></script>
+    <script src="../assets/js/fileinput.min.js"></script>
+    <script src="../assets/js/fileinput_locale_zh.js"></script>
+    <script src="../assets/js/ueditor.config.js"></script>
+    <script src="../assets/js/ueditor.all.min.js"></script>
+    <script src="../assets/js/1_index/task_add.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" id="common_module-nav">
+
+    </nav>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <a id="table-back" href="task.html" class="btn btn-success"><i class="glyphicon glyphicon-menu-left"></i>返回</a>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="page-header">
+                            <h2>发布任务</h2>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="input01">任务名称</label>
+                            <input type="text" class="form-control" id="title" placeholder="请输入任务名称">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">发布范围</label><br />
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D10050316">句容市
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031604">下蜀镇
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031601">白兔镇
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031602"> 宝华镇
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031603"> 茅山镇
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031605">华阳
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031606"> 边城
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031607">赤山湖
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031608"> 后白
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031609"> 郭庄
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="checkbox" id="range" value="D1005031610">开发区
+                            </label>
+                            
+                        </div>  
+                        <div class="form-group">
+                            <label class="control-label">内容简介</label>
+                            <textarea class="form-control" rows="3" id="peek" placeholder="请输入内容简介，50字以内。。。。"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">截止日期：</label>
+                            <input size="16" type="text" readonly class="form_datetime form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">正文</label>
+                            <textarea name="mainText" id="mainText"></textarea>
+                        </div>
+                    </fieldset>
+                </form>
+                <button type="button" id="submit" class="btn  btn-info btn-block" style="margin-bottom:30px"><i class="glyphicon glyphicon-circle-arrow-up"></i>提交</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>添加</title>
+   
+</head>
+<body class=""> 
+    <button class="addbtn">123</button>  
+    <script src="js/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script> 
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script> 
+    <script src="js/md5.js"></script>
+    <script>
+        $(".addbtn").click(function () {
+            var hash = md5("111111");  // "96e79218965eb72c92a549dd5a330112"
+            var d1 = new Date("2004/09/16 20:08:00");
+            var d2 = new Date("2004/09/17 20:08:00");
+            var d3 = (d2 - d1) / 1000;
+            alert(hash);
+            var token=MD5("webapi/service/vss/postMsgInfo"+"{"a":"1","c":"test","b":"xys","appkey":"f8524632","time":"1447756521042"}"+"0a5a6558a06546088da645b5");
+            alert(token);
+            $.ajax({
+                type: "POST",
+                url: "http://172.16.0.31:80/webapi/service/vss/postMsgInfo?token="+token ,
+                contentType: "application/json", 
+                dataType: "JSON",
+                processData: true,
+                success: function (data) {
+                    console.log(data);
+                }
+            })
+
+        });
+
+    </script> 
+</body>
+ 
+</html>  
